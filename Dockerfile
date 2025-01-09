@@ -17,6 +17,9 @@ COPY . .
 # Build the Astro.js application
 RUN npm run build
 
+# Install Alpine dependencies
+RUN apk --no-cache add curl
+
 # Set the command to start the Astro.js application
 CMD ["npm", "run", "dev"]
 
